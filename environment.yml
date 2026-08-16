@@ -1,0 +1,20 @@
+# Conda/mamba environment for the EgoPressure toolkit.
+#   conda env create -f environment.yml && conda activate egopressure
+# Includes ffmpeg (needed for video export) — pip cannot provide it.
+# The binary stack (incl. pytorch) comes from conda-forge; pip adds the
+# package itself + huggingface_hub via the [all] extra.
+name: egopressure
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.9,<3.14
+  - ffmpeg
+  - numpy>=1.21
+  - pillow>=9
+  - pyarrow>=14
+  - matplotlib>=3.5
+  - ipywidgets>=8
+  - pytorch>=2.0
+  - pip
+  - pip:
+      - -e .[all]

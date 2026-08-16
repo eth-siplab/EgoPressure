@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+# user-provided, license-gated — never commit
+mano_models/*
+!mano_models/README.md
+# downloaded data
+egopressure_data/
+.DS_Store
+*.mp4
+frame.png
+.ruff_cache/
+.ipynb_checkpoints/
